@@ -19,19 +19,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-#00BFFF" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">HOME</a>
     <a href="comofunciona.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COMO FUNCIONA</a>
-    <a href="cadastro/index_cdst.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CADASTRE - SE</a>
+    <a href="../View/Login/cadastro.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CADASTRE - SE</a>
     <a href="../../hpt_V2.0/View/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> BAIXAR APLICATIVO</a>
     <a href="https://coronavirus.saude.gov.br/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COVID-19</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">HOME</a>
+    <a href="comofunciona.php" class="w3-bar-item w3-button w3-padding-large">COMO FUNCIONA</a>
+    <a href="../View/Login/cadastro.php" class="w3-bar-item w3-button w3-padding-large">CADASTRE - SE</a>
+    <a href="../../hpt_V2.0/View/" class="w3-bar-item w3-button w3-padding-large"> BAIXAR APLICATIVO</a>
+    <a href="https://coronavirus.saude.gov.br/" class="w3-bar-item w3-button w3-padding-large">COVID-19</a>
   </div>
 </div>
 
