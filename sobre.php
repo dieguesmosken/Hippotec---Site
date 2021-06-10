@@ -39,7 +39,7 @@ button {
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-#00BFFF"
                 href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
-            <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+            <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-hover-white">HOME</a>
             <a href="#imagens_sobre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">SOBRE NÓS</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">TABELA DOENÇAS</a>
             <a href="view/Login/cadastro.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CADASTRO</a>
