@@ -94,7 +94,7 @@ if(isset($_POST['coment_usr'])){
 
 <body>
     <!--incio do div do titulo do User-->
-    <div class="w3-container w3-purple">
+    <div class="w3-container w3-teal">
 
         <hr>
         <h1 class="">Detalhes do: <?php echo $objetoUser->nome_usr;?></h1>

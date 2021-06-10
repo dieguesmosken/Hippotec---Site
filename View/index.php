@@ -1,7 +1,8 @@
 <?php
 session_start();
+
 if(!empty($_SESSION['id'])){
-	if($_SESSION['tipo_usr'] == 1){
+//	if($_SESSION['tipo_usr'] == 1){
 ?>
 
 
@@ -52,7 +53,7 @@ button {
 
             <a href="https://coronavirus.saude.gov.br/"
                 class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COVID-19</a>
-            <a href="/How-It-Works" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COMO
+            <a href="../howitworks.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COMO
                 FUNCIONA</a>
                 <?php 
                 if(!empty($_SESSION['id'])){
@@ -167,10 +168,10 @@ foreach($users as $registro){
 
 </html>
 <?php
-    }else{
+    /*}else{
         $_SESSION['msg'] = "USER NOT ADMIN!";
 	    header("Location: Login/login.php");	
-    }
+    }*/
 
 }else{
 	$_SESSION['msg'] = "USER NOT LOGGED IN!";
