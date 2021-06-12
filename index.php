@@ -43,8 +43,9 @@ button {
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-#00BFFF"
                 href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">HOME</a>
             <a href="sobre.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SOBRE NÓS</a>
+            <a href="siteapp/index.php" class="w3-bar-item w3-button w3-padding-large">SITE APLICATIVO</a>
             <?php 
             if($_SESSION['tipousr'] == 1){
                 echo "<a href='View/index.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow'>PAINEL ADM</a>";
@@ -83,7 +84,8 @@ button {
         <h1 class="w3-margin w3-jumbo">BEM VINDO!</h1>
         
         <p class="w3-xlarge">MAIS SAÚDE PARA VOCÊ</p>
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">BAIXE O APP</button>
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="../hpt_V2.0/View/"
+                style="text-decoration:none">BAIXE O APP</a></button>
     </header>
 
     <!-- First Grid -->
