@@ -25,8 +25,10 @@ h4,
 h5,
 h6 {
     font-family: "Lato", sans-serif
-}
-
+}/*
+body{
+    background-color: #84e2f1;
+}*/
 .w3-bar,
 h1,
 button {
@@ -53,21 +55,22 @@ button {
 
             <a href="https://coronavirus.saude.gov.br/"
                 class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COVID-19</a>
-            <a href="../howitworks.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">COMO
-                FUNCIONA</a>
-                <?php 
+           
+            <?php 
                 if(!empty($_SESSION['id'])){
                     ?>
-                    <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><?php echo $_SESSION['nome'] ?></a>
-                    <a href="login/sair.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sair</a>
-                    <?php
+            <a
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><?php echo $_SESSION['nome'] ?></a>
+            <a href="login/sair.php"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sair</a>
+            <?php
                 }else{
                     echo "<a href='login/login.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Login</a>";
                 }
                 ?>
 
-            
-        
+
+
         </div>
 
         <!-- Navbar on small screens -->
@@ -91,22 +94,20 @@ $users = UsersController::listarUsers();
     <div class="w3-row-padding w3-padding-64 ">
         <div class="w3-content w3-container w3-col-12">
             <div class="">
-                <div class="w3-container w3-green">
+                <div class="w3-container" style="background-color: #84e2f1">
                     <br>
-                    <a class="w3-btn w3-green" href="frmCadastrarUser.php">Cadastrar um novo Usuario</a>
+                    <a class="w3-btn w3-blue"  href="frmCadastrarUser.php">Cadastrar um novo Usuario</a>
                     <hr>
                 </div>
                 <hr>
                 <div class="">
                     <table class="w3-table-all w3-hoverable">
-                        <tr class="w3-teal">
+                        <tr class="" style="background-color: #84e2f1">
                             <td>ID</td>
                             <td>NOME</td>
-                            <td>SENHA</td>
-                            <td>CPF</td>
-                            <td>DT. NASC.</td>
-                            <td>EMAIL</td>
-                            <td>TIPO</td>
+                            <td>DT CRIADO</td>
+                            <td>DT MODIFICADO</td>
+                            <td>TIPO USER</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -118,11 +119,15 @@ foreach($users as $registro){
                         <tr>
                             <td class=""><?php echo $registro['id'];?></td>
                             <td><?php echo $registro['nome_usr'];?></td>
-                            <td><?php echo $registro['pass_usr'];?></td>
-                            <td><?php echo $registro['cpf_usr'];?></td>
-                            <td><?php echo $registro['dtnasc_usr'];?></td>
-                            <td><?php echo $registro['email_usr'];?></td>
-                            <td><?php echo $registro['tipo_usr'];?></td>
+                            <td><?php echo $registro['dtcriado_usr'];?></td>
+                            <td><?php echo $registro['dtmodificado_usr'];?></td>
+                            <td><?php 
+                                if($registro['tipo_usr'] == 1){
+                                    echo $registro['tipo_usr']." - Administrador";
+                                }else{
+                                    echo $registro['tipo_usr']." - Comum";
+                                }?>
+                            </td>
                             <td>
                                 <a href="detalharUser.php?id=<?= $registro['id']; ?>" alt="detalhe_user">
                                     <i class="fa fa-commenting-o"></i>

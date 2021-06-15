@@ -46,12 +46,17 @@ button {
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">HOME</a>
             <a href="sobre.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SOBRE NÓS</a>
             <a href="siteapp/index.php" class="w3-bar-item w3-button w3-padding-large">SITE APLICATIVO</a>
-            <?php 
-            if($_SESSION['tipousr'] == 1){
-                echo "<a href='View/index.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow'>PAINEL ADM</a>";
-               
-            }else{}
-            ?>
+        
+            <?php if (!empty($_SESSION['nome'])) {
+                        if($_SESSION['tipousr'] == 1){
+                            echo "<a href='View/index.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow'>PAINEL ADM</a>";
+                        }
+                        else{
+
+                        }
+                    }else{
+                      
+                    }?>
             
 
             <a href="View/Login/cadastro.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CADASTRO</a>
