@@ -31,7 +31,7 @@ if(isset($_POST['coment_usr'])){
         ?>
 <!--inicio da div de aviso se foi com sucesso-->
 <div class="w3-panel w3-blue">
-    <h3>Information!</h3>
+    <h3>INFORMAÇÃO!</h3>
     <p>O Comentario Foi Adicionado com sucesso!</p>
     <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
 </div>
@@ -41,7 +41,7 @@ if(isset($_POST['coment_usr'])){
         ?>
 <!--inicio da div de aviso do erro-->
 <div class="w3-panel w3-blue">
-    <h3>Information!</h3>
+    <h3>INFORMAÇÃO!</h3>
     <p>Ocorreu um erro ao adicionar o registro!</p>
     <p>Codigo de erro: <?= $error_code ?></p>
     <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
@@ -94,35 +94,37 @@ if(isset($_POST['coment_usr'])){
 
 <body>
     <!--incio do div do titulo do User-->
-    <div class="w3-container w3-teal">
+    <div class="w3-container" style="background-color: #84e2f1">
 
         <hr>
-        <h1 class="">Detalhes do: <?php echo $objetoUser->nome_usr;?></h1>
+        <h1>Detalhes do: <?php echo $objetoUser->nome_usr;?></h1>
         <h4> <a class="w3-button w3-black" href="index.php"> Voltar para a lista</a></h4>
-        <table class="w3-hoverable w3-table w3-border w3-bordered w3-green">
+
+        
+        <table class="w3-hoverable w3-table w3-border w3-bordered" style="background-color: #62b5f7">
             <tr>
-                <td class="w3-blue">Data Criado</td>
+                <td style="background-color: #0799ff">Data Criado</td>
                 <td><?php echo $objetoUser->dtcriado_usr ?></td>
-                <td class="w3-blue">Data Modificado.</td>
+                <td style="background-color: #0799ff">Data Modificado.</td>
                 <td><?php echo $objetoUser->dtmodificado_usr ?></td>
             </tr>
             <tr>
-                <td class="w3-red">ID</td>
+                <td style="background-color: #0799ff" >ID</td>
                 <td><?php echo $objetoUser->id ?></td>
-                <td class="w3-red">DT.NASC.</td>
+                <td style="background-color: #0799ff">DT.NASC.</td>
                 <td><?php echo $objetoUser->dtnasc_usr ?></td>
             </tr>
             <tr>
-                <td class="w3-red">NOME</td>
+                <td style="background-color: #0799ff">NOME</td>
                 <td><?php echo $objetoUser->nome_usr ?></td>
-                <td class="w3-red">EMAIL</td>
+                <td style="background-color: #0799ff">EMAIL</td>
                 <td><?php echo $objetoUser->email_usr ?></td>
 
             </tr>
             <tr>
-                <td class="w3-red">SENHA</td>
+                <td style="background-color: #0799ff">SENHA</td>
                 <td><?php echo $objetoUser->pass_usr ?></td>
-                <td class="w3-red">TIPO</td>
+                <td style="background-color: #0799ff">TIPO</td>
                 <td><?php 
                 if($objetoUser->tipo_usr == 1){
                     echo $objetoUser->tipo_usr." - Administrador";
@@ -133,7 +135,7 @@ if(isset($_POST['coment_usr'])){
                 </td>
             </tr>
             <tr>
-                <td class="w3-red">CPF</td>
+                <td style="background-color: #0799ff">CPF</td>
                 <td><?php echo $objetoUser->cpf_usr ?></td>
             </tr>
         </table>
@@ -147,7 +149,7 @@ if(isset($_POST['coment_usr'])){
         <!--inicio da div que exibira os comentarios-->
         <div id="listacomentarios">
             <table class="w3-hoverable">
-                <tr class="w3-teal">
+                <tr style="background-color: #21f3">
                     <td>ID Coment</td>
                     <td>Comentario</td>
                     <td>Criado Em</td>
@@ -158,10 +160,10 @@ if(isset($_POST['coment_usr'])){
     foreach($comentarios as $comentario){
     ?>
                 <tr>
-                    <td class="w3-hover-shadow"><?php echo $comentario['id'];?></td>
-                    <td class="w3-hover-shadow"><?php echo $comentario['coment_usr'];?></td>
-                    <td class="w3-hover-shadow"><?php echo $comentario['coment_criado'];?></td>
-                    <td class="w3-hover-shadow"><?php echo $comentario['id_user'];?></td>
+                    <td class="w3-hover-shadow" style="background-color: #0799ff"><?php echo $comentario['id'];?></td>
+                    <td class="w3-hover-shadow" style="background-color: #0799ff"><?php echo $comentario['coment_usr'];?></td>
+                    <td class="w3-hover-shadow" style="background-color: #0799ff"><?php echo $comentario['coment_criado'];?></td>
+                    <td class="w3-hover-shadow" style="background-color: #0799ff"><?php echo $comentario['id_user'];?></td>
                 </tr>
                 <?php
     }
